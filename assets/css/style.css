@@ -1,17 +1,57 @@
+<<<<<<< HEAD
+=======
+/* ============================================
+   Recipe App — Warm Editorial Style
+   Rich terracotta & cream palette with
+   organic textures and refined typography
+   ============================================ */
+
+/* === BASE STYLES === */
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+=======
+
+:root {
+    --cream: #f5efe6;
+    --cream-dark: #ebe3d5;
+    --terracotta: #c2553a;
+    --terracotta-dark: #a04430;
+    --terracotta-light: #d97a62;
+    --charcoal: #2c2c2c;
+    --warm-gray: #6b6058;
+    --light-warm: #b8ada0;
+    --white: #fdfbf8;
+    --shadow: 0 4px 24px rgba(44, 44, 44, 0.08);
+    --shadow-hover: 0 12px 40px rgba(44, 44, 44, 0.15);
+    --radius: 12px;
+    --radius-sm: 6px;
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    background: var(--cream);
+>>>>>>> 3b9df05 (adding all fixed updated codes)
     min-height: 100vh;
     padding: 20px;
+    color: var(--charcoal);
+    line-height: 1.7;
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(194, 85, 58, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(194, 85, 58, 0.03) 0%, transparent 50%);
 }
 
 .container {
+<<<<<<< HEAD
     max-width: 1200px;
     margin: 0 auto;
     background: white;
@@ -29,11 +69,59 @@ header h1 {
     color: #333;
     font-size: 2.5em;
     margin-bottom: 15px;
+=======
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 48px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--terracotta), var(--terracotta-light), var(--terracotta));
+}
+
+/* === HEADER STYLES === */
+header {
+    text-align: center;
+    margin-bottom: 44px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--cream-dark);
+    position: relative;
+}
+
+header h1 {
+    color: var(--charcoal);
+    font-size: 3.4em;
+    margin-bottom: 8px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header h1 span,
+header h1 em {
+    color: var(--terracotta);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 nav {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -52,10 +140,44 @@ nav a:hover {
     background: #764ba2;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+=======
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+nav a,
+nav .user-info {
+    text-decoration: none;
+    color: var(--white);
+    background: var(--terracotta);
+    padding: 11px 28px;
+    border-radius: 50px;
+    transition: var(--transition);
+    font-weight: 600;
+    font-size: 0.82em;
+    display: inline-block;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 85, 58, 0.3);
+}
+
+nav .user-info {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+    cursor: default;
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 hr {
     border: none;
+<<<<<<< HEAD
     height: 2px;
     background: linear-gradient(to right, transparent, #667eea, transparent);
     margin: 20px 0;
@@ -67,13 +189,115 @@ hr {
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 30px;
+=======
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--light-warm), transparent);
+    margin: 34px 0;
+}
+
+/* === PAGE HEADER === */
+.page-header {
+    margin-bottom: 38px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 2.4em;
+    font-weight: 300;
+    color: var(--charcoal);
+    flex-wrap: wrap;
+    letter-spacing: 0.5px;
+}
+
+.title-icon {
+    font-size: 1em;
+}
+
+.result-badge {
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.38em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* === SEARCH SECTION === */
+.search-section {
+    margin-bottom: 44px;
+}
+
+.search-form {
+    background: var(--cream);
+    padding: 36px;
+    border-radius: var(--radius);
+    border: 1px solid var(--cream-dark);
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--charcoal);
+    letter-spacing: 0.5px;
+}
+
+.search-icon {
+    font-size: 1.1em;
+    color: var(--terracotta);
+}
+
+.btn-clear {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+    padding: 9px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.78em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.btn-clear:hover {
+    background: var(--terracotta);
+    color: var(--white);
+    transform: translateY(-1px);
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 .search-grid {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
+=======
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-bottom: 28px;
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 .form-group {
@@ -83,16 +307,38 @@ hr {
 
 .form-group label {
     font-weight: 600;
+<<<<<<< HEAD
     color: #555;
     margin-bottom: 8px;
     font-size: 0.9em;
 }
 
 input[type="text"],
+=======
+    color: var(--charcoal);
+    margin-bottom: 10px;
+    font-size: 0.82em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.label-icon {
+    font-size: 1.2em;
+    color: var(--terracotta);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 input[type="file"],
 textarea,
 select {
     width: 100%;
+<<<<<<< HEAD
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
@@ -114,6 +360,50 @@ textarea {
 }
 
 /* Autocomplete Styles */
+=======
+    padding: 13px 18px;
+    border: 1.5px solid var(--cream-dark);
+    border-radius: var(--radius-sm);
+    font-size: 1.05em;
+    transition: var(--transition);
+    background: var(--white);
+    font-family: inherit;
+    color: var(--charcoal);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(194, 85, 58, 0.12);
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c2553a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 42px;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+    color: var(--light-warm);
+}
+
+/* === AUTOCOMPLETE === */
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 .autocomplete-wrapper {
     position: relative;
 }
@@ -123,6 +413,7 @@ textarea {
     top: 100%;
     left: 0;
     right: 0;
+<<<<<<< HEAD
     background: white;
     border: 2px solid #667eea;
     border-top: none;
@@ -161,10 +452,76 @@ textarea {
 .btn-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+=======
+    background: var(--white);
+    border: 1.5px solid var(--terracotta);
+    border-top: none;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    display: none;
+    margin-top: -2px;
+}
+
+.suggestions-list.active {
+    display: block;
+}
+
+.suggestions-list li {
+    padding: 13px 18px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--cream-dark);
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.suggestions-list li:hover {
+    background: rgba(194, 85, 58, 0.06);
+    color: var(--terracotta);
+}
+
+.suggestion-icon {
+    font-size: 1.1em;
+    color: var(--terracotta);
+}
+
+/* === BUTTONS === */
+.btn {
+    padding: 13px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.82em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: var(--terracotta);
+    color: var(--white);
+>>>>>>> 3b9df05 (adding all fixed updated codes)
     width: 100%;
 }
 
 .btn-primary:hover {
+<<<<<<< HEAD
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
@@ -212,10 +569,134 @@ textarea {
     object-fit: cover;
     border-radius: 8px;
     margin: 15px 0;
+=======
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 85, 58, 0.3);
+}
+
+.btn-primary:disabled {
+    background: var(--light-warm);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+}
+
+.btn-outline:hover {
+    background: var(--terracotta);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 85, 58, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.1em;
+}
+
+/* === RECIPE CARDS === */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.recipe-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--cream-dark);
+    position: relative;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--terracotta-light);
+}
+
+.recipe-image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.recipe-card:hover .recipe-image img {
+    transform: scale(1.06);
+}
+
+.recipe-image.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+}
+
+.no-image-placeholder {
+    font-size: 4em;
+    opacity: 0.25;
+    color: var(--terracotta-light);
+}
+
+.difficulty-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--terracotta);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+}
+
+.difficulty-easy {
+    background: rgba(107, 96, 88, 0.85);
+}
+
+.difficulty-medium {
+    background: rgba(194, 85, 58, 0.88);
+}
+
+.difficulty-hard {
+    background: rgba(160, 68, 48, 0.9);
+}
+
+.recipe-content {
+    padding: 28px;
+}
+
+.recipe-title {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.3px;
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 .recipe-meta {
     display: flex;
+<<<<<<< HEAD
     gap: 20px;
     margin: 15px 0;
     flex-wrap: wrap;
@@ -240,10 +721,78 @@ textarea {
 .ingredients-list li {
     margin: 8px 0;
     line-height: 1.6;
+=======
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--cream);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.82em;
+    font-weight: 600;
+    color: var(--warm-gray);
+    border: 1px solid var(--cream-dark);
+    letter-spacing: 0.4px;
+}
+
+.meta-icon {
+    font-size: 1em;
+    color: var(--terracotta);
+}
+
+.recipe-description {
+    margin: 16px 0;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    font-size: 1.05em;
+}
+
+.ingredients-preview {
+    margin: 22px 0;
+}
+
+.ingredients-preview strong {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+    font-size: 0.78em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ingredient-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ingredient-tag {
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.82em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.ingredient-tag.more {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+>>>>>>> 3b9df05 (adding all fixed updated codes)
 }
 
 .recipe-actions {
     display: flex;
+<<<<<<< HEAD
     gap: 15px;
     margin-top: 15px;
 }
@@ -342,3 +891,489 @@ footer {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+=======
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--cream-dark);
+}
+
+.btn-action {
+    flex: 1;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.78em;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+.btn-edit {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+}
+
+.btn-edit:hover {
+    background: var(--terracotta);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(194, 85, 58, 0.25);
+}
+
+.btn-delete {
+    background: var(--terracotta);
+    color: var(--white);
+    border: 1.5px solid var(--terracotta);
+}
+
+.btn-delete:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(194, 85, 58, 0.3);
+}
+
+.action-icon {
+    font-size: 1.1em;
+}
+
+/* === LOADING & EMPTY STATES === */
+.loading-spinner {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--cream-dark);
+    border-top-color: var(--terracotta);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 22px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+    color: var(--warm-gray);
+    font-size: 1.15em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.empty-icon {
+    font-size: 5em;
+    margin-bottom: 22px;
+    opacity: 0.25;
+    color: var(--terracotta-light);
+}
+
+.empty-state h3 {
+    font-size: 1.9em;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.empty-state p {
+    color: var(--warm-gray);
+    font-size: 1.1em;
+    margin-bottom: 28px;
+}
+
+.error-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--cream);
+    border-radius: var(--radius);
+    border: 1px solid var(--cream-dark);
+}
+
+.error-icon {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: var(--terracotta);
+}
+
+.error-state h3 {
+    font-size: 1.8em;
+    margin-bottom: 14px;
+    color: var(--charcoal);
+    font-weight: 300;
+}
+
+.error-state p {
+    color: var(--warm-gray);
+    font-size: 1.1em;
+}
+
+/* === MESSAGES === */
+.message {
+    padding: 16px 22px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 28px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95em;
+    letter-spacing: 0.3px;
+}
+
+.message.success,
+.success-message {
+    background: rgba(194, 85, 58, 0.07);
+    color: var(--terracotta-dark);
+    border: 1.5px solid var(--terracotta-light);
+}
+
+.message.error,
+.error-message {
+    background: var(--terracotta);
+    color: var(--white);
+    border: 1.5px solid var(--terracotta-dark);
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    color: var(--light-warm);
+    padding: 32px 0;
+    font-size: 0.9em;
+    margin-top: 44px;
+    border-top: 1px solid var(--cream-dark);
+    letter-spacing: 0.5px;
+}
+
+/* === AUTH PAGES === */
+.login-container,
+.register-container,
+.logout-container,
+.password-container {
+    max-width: 440px;
+    margin: 60px auto;
+    padding: 44px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--cream-dark);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before,
+.register-container::before,
+.logout-container::before,
+.password-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--terracotta), var(--terracotta-light));
+}
+
+.login-container h2,
+.register-container h2,
+.logout-container h2,
+.password-container h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--charcoal);
+    font-weight: 300;
+    font-size: 1.8em;
+    letter-spacing: 0.5px;
+}
+
+.btn-login,
+.btn-register,
+.btn-logout,
+.btn-change {
+    width: 100%;
+    padding: 14px;
+    background: var(--terracotta);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 0.82em;
+    cursor: pointer;
+    font-weight: 700;
+    transition: var(--transition);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+.btn-login:hover,
+.btn-register:hover,
+.btn-logout:hover,
+.btn-change:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(194, 85, 58, 0.3);
+}
+
+.btn-login:disabled,
+.btn-register:disabled,
+.btn-change:disabled {
+    background: var(--light-warm);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: var(--terracotta);
+    border: 1.5px solid var(--terracotta);
+}
+
+.btn-cancel:hover {
+    background: rgba(194, 85, 58, 0.06);
+}
+
+.links {
+    text-align: center;
+    margin-top: 22px;
+    color: var(--warm-gray);
+    font-size: 0.95em;
+}
+
+.links a {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    color: var(--terracotta-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.password-strength {
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    transition: var(--transition);
+    background: var(--cream-dark);
+    overflow: hidden;
+}
+
+.strength-weak {
+    background: var(--terracotta-light);
+    width: 33%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.strength-medium {
+    background: var(--terracotta);
+    width: 66%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.strength-strong {
+    background: var(--terracotta-dark);
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.password-requirements {
+    background: var(--cream);
+    padding: 16px 18px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 22px;
+    border: 1px solid var(--cream-dark);
+}
+
+.password-requirements h4 {
+    margin: 0 0 10px 0;
+    color: var(--charcoal);
+    font-size: 0.78em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.password-requirements ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.92em;
+}
+
+.password-requirements li {
+    margin: 5px 0;
+    color: var(--light-warm);
+    transition: var(--transition);
+}
+
+.requirement-met {
+    color: var(--terracotta) !important;
+    font-weight: 600;
+}
+
+.requirement-not-met {
+    color: var(--light-warm);
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 22px;
+    color: var(--warm-gray);
+    font-size: 0.95em;
+}
+
+.user-info strong {
+    color: var(--charcoal);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: var(--light-warm);
+    font-size: 0.88em;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .page-title {
+        font-size: 1.7em;
+    }
+
+    .search-form {
+        padding: 26px;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a,
+    nav .user-info {
+        text-align: center;
+    }
+
+    .recipe-actions {
+        flex-direction: column;
+    }
+
+    .search-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-clear {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    .recipe-image {
+        height: 190px;
+    }
+
+    .login-container,
+    .register-container,
+    .logout-container,
+    .password-container {
+        padding: 28px;
+    }
+}
+
+/* === UTILITY CLASSES === */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-group .btn {
+    flex: 1;
+    min-width: 150px;
+}
+
+@media (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+}
+
+/* Ensure the delete <button> inside the POST form matches the .btn-action <a> styling */
+.recipe-actions form {
+    flex: 1;
+}
+
+.recipe-actions form .btn-action {
+    width: 100%;
+    border: 1.5px solid var(--terracotta);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+>>>>>>> 3b9df05 (adding all fixed updated codes)
